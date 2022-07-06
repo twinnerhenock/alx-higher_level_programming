@@ -2,11 +2,10 @@
 # 12-roman_to_int.py
 # Henock Yared
 
-
 def roman_to_int(roman_string):
     """Converts a roman numeral to an integer."""
     if (not isinstance(roman_string, str) or
-            roman_string is None):
+        roman_string is None):
         return (0)
 
     roman_dict = {
