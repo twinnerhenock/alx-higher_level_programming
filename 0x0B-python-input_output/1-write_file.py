@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-# 1-number_of_lines.py
+# 3-write_file.py
 # Henock
-"""Defines a text file line-counting function."""
+"""Defines a file-writing function."""
 
 
 def write_file(filename="", text=""):
-    """Return the number of lines in a text file."""
-    s = str(text)
-    with open(filename) as f:
-        f.write(s)
+    """Write a string to a UTF8 text file.
+    Args:
+        filename (str): The name of the file to write.
+        text (str): The text to write to the file.
+    Returns:
+        The number of characters written.
+    """
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
