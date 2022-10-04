@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print(f"{import this}")
+script = import this
+print(f"{script:s}")
