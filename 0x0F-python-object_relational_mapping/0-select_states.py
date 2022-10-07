@@ -10,4 +10,4 @@ if __name__ == "__main__":
     db = MySQLdb.connect(user=MY_USER, passwd=MY_PASS, db=MY_DB)
     c = db.cursor()
     c.execute("SELECT * FROM states ORDER BY id")
-    [print(state) for state in c.fetchall()]
+    print (id, '%s') % c.fetchone()
