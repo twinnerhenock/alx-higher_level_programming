@@ -24,4 +24,4 @@ if __name__ == "__main__":
     session = Session()
 
     for instance in session.query(State).filter(State.name.contains('a')):
-        print('f{instance.id} :{instance.name}')
+        print(f'{instance.id} :{instance.name}')
