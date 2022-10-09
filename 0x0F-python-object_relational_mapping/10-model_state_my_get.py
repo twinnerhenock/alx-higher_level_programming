@@ -4,7 +4,7 @@ This script prints the State object id
 with the name passed as argument
 from the database `hbtn_0e_6_usa`.
 """
-import sys
+
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -22,9 +22,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    instance = session.query(State).filter(State.name == argv[4]).first()
+    instance = session.query(State).filter(State.name == argv[4])
 
     if instance is None:
         print('Not found')
     else:
-        print('{instance.id}')
+        print(f'{instance.id}')
