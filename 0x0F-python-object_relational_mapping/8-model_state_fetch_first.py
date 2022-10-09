@@ -19,11 +19,11 @@ if __name__ == "__main__":
         argv[1], argv[2], argv[3])
     engine = create_engine(db_uri)
     Session = sessionmaker(bind=engine)
-
+    Session.configure(bind=engine)
     session = Session()
     instance = session.query(State).order_by(State.id).first()
 
     if instance is None:
         print('Nothing')
     else:
-        print('{0}: {1}'.format(instance.id, instance.name))
+        print(instance.id, instance.name)
